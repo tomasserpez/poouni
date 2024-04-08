@@ -25,4 +25,11 @@ public class Clase {
         this.nombre = nombre;
     }
 
+    @Override
+    public String toString() {
+        return "Clase{\n" +
+                "idClase=" + idClase +
+                ",\n nombre='" + nombre + '\'' +
+                '}';
+    }
 }

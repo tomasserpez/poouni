@@ -24,4 +24,12 @@ public class Nota {
     public void setCalificacion(int calificacion) {
         this.calificacion = calificacion;
     }
+
+    @Override
+    public String toString() {
+        return "Nota{\n" +
+                "clase=" + clase +
+                ",\n calificacion=" + calificacion +
+                '}';
+    }
 }

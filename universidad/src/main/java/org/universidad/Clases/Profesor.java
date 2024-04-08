@@ -14,7 +14,8 @@ public class Profesor extends Persona{
 
     @Override
     public String toString() {
-        return "Profesor{" +
+        return "Nombre" + this.getNombreApellido() +
+                "Profesor{" +
                 "idProfesor=" + idProfesor +
                 ", clases=" + clases +
                 '}';

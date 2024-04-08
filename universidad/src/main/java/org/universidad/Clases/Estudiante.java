@@ -49,10 +49,11 @@ public class Estudiante extends Persona{
 
     @Override
     public String toString() {
-        return "Estudiante{" +
+        return  "Nombre" + this.getNombreApellido() +
+                "Estudiante{" +
                 "idEstudiante=" + idEstudiante +
-                ", clases=" + clases +
-                ", notas=" + notas +
+                ", clases=" + clases.toString() +
+                ", notas=" + notas.toString() +
                 '}';
     }
 

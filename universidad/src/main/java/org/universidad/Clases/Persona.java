@@ -1,6 +1,6 @@
 package org.universidad.Clases;
 
-public abstract class Persona {
+public class Persona {
     private String nombreApellido;
     private String email;
     private String direccion;
