@@ -71,5 +71,32 @@ public class Main {
 
         System.out.println(profesor1.getNombreApellido() + ": " + profesor1.getEstado());
         System.out.println(profesor2.getNombreApellido() + ": " + profesor2.getEstado());
+
+
+        // Crear un usuario
+        CuentaCliente cuentaCliente1 = new CuentaCliente("Juan Perez", 12345678, "juanperez", "1234", "jperez@prueba.com", 1, 1000, 1, 123456, 25);
+        CuentaCliente cuentaCliente2 = new CuentaCliente("Maria Lopez", 87654321, "marialopez", "5678", "mlopez@prueba.com", 2, 2000, 2, 654321, 30);
+        CuentaCliente cuentaCliente3 = new CuentaCliente("Pedro Gomez", 11111111, "pedrogomez", "1111", "pgomez@prueba.com", 3, 3000, 3, 111111, 16);
+
+        System.out.println(cuentaCliente3.isEsMayor());
+
+        Banco banco1 = new Banco("Banco1", 1, "Argentina");
+        Sucursal sucursal1 = new Sucursal("Banco1", 1, "Argentina", "Av. Siempreviva 123", 1, 123456789);
+
+        sucursal1.crearTransferencia(1, 500, "01/01/2021", cuentaCliente1, cuentaCliente2);
+        //probaremos el login ingresando por teclado la contraseña
+        //Ingresamos por teclado
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Ingrese su contraseña: ");
+            String password = scanner.nextLine();
+            if (cuentaCliente1.login("juanperez", password)) {
+                System.out.println("Contraseña correcta");
+                break;
+            } else {
+                System.out.println("Contraseña incorrecta");
+            }
+        }
+    }
     }
 }
